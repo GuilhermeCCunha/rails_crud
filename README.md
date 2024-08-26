@@ -32,11 +32,15 @@ bundle install
 ```
 
 ```bash
+yarn install 
+```
+
+```bash
 rails s -b 0.0.0.0 
 ```
 o projeto será executado em modo de desenvolvimento
 
-## Instruções Para executar em produção
+## Instruções para executar em produção
 
 * primeiro apague o arquivo `credentials.yml.enc` e depois crie uma nova `master.key`  com o comando 
 
