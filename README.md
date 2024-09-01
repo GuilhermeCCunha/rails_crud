@@ -42,7 +42,7 @@ o projeto será executado em modo de desenvolvimento
 
 ## Instruções para executar em produção
 
-* primeiro apague o arquivo `credentials.yml.enc` e depois crie uma nova `master.key`  com o comando 
+* primeiro apague o arquivo `config/credentials.yml.enc` e depois crie uma nova `config/master.key`  com o comando 
 
     ```bash 
         EDITOR=nano rails credentials:edit 
@@ -61,10 +61,10 @@ o projeto será executado em modo de desenvolvimento
     ```bash 
        docker compose up 
     ```  
-* Use o comando abaixo para para migrar as tabelas    
+* Use o comando abaixo para criar o banco de dados e migrar as tabelas    
 
     ```bash 
-       RAILS_ENV=production rails db:migrate 
+       RAILS_ENV=production rails db:create db:migrate
     ```  
 
 * Eu também configurei um pgAdmin abra o arquivo `docker-compose.yml` para ver mais detalhes
